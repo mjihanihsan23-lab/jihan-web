@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HAI USER</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #1d2671, #c33764);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 30px 40px;
+      width: 320px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+      animation: fadeIn 1.2s ease;
+    }
+
+    img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid white;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      margin: 10px 0 5px;
+      font-size: 26px;
+    }
+
+    h3 {
+      margin: 0 0 15px;
+      font-weight: 400;
+      opacity: 0.9;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.6;
+      opacity: 0.95;
+    }
+
+    .social {
+      margin-top: 20px;
+    }
+
+    .social a {
+      text-decoration: none;
+      color: white;
+      margin: 0 10px;
+      font-size: 18px;
+      transition: transform 0.3s, color 0.3s;
+    }
+
+    .social a:hover {
+      transform: scale(1.3);
+      color: #ffd369;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="https://imgur.com/a/NXq88tn" />
+    <h1>M Jihan Ihsan</h1>
+    <h3>Mahasiswa | Programmer</h3>
+    <p>
+      Halo! Saya adalah seseorang yang tertarik dengan dunia teknologi,
+      pemrograman, dan desain. Saya suka belajar hal baru dan
+      mengembangkan ide menjadi sesuatu yang bermanfaat.
+    </p>
+
+    <div class="social">
+      <a href="https://www.instagram.com/itsjihanihsan" target="_blank">Instagram</a>
+      <a href="https://www.tiktok.com/@jihan4youuu" target="_blank">TikTok</a>
+    </div>
+  </div>
+</body>
+</html>
