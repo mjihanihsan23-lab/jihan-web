@@ -120,6 +120,12 @@
     <h1>🎧 Musik Favoritku</h1>
 
     <ul class="music-list">
+      <ul class="music-list">
+  <li onclick="openSpotify()" style="cursor:pointer;">
+    🎧 Lagu Favoritku
+  </li>
+</ul>
+
       <li>🎶 Indie / Alternative</li>
       <li>🎵 Pop & Indie Pop</li>
       <li>🎹 Lo-fi & Chill</li>
@@ -139,6 +145,15 @@
       <span style="opacity:0.5;">Next ➜</span>
     </div>
   </div>
+  <script>
+  function openSpotify() {
+    window.open(
+      "https://open.spotify.com/track/64qfw9JZl3RYCrq4Mn0WvT?si=1a4e5f1a3287429e",
+      "_blank"
+    );
+  }
+</script>
+
 </body>
 </html>
 
