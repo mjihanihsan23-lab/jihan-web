@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Musik Favorit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #141e30, #243b55);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 30px;
+      width: 330px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+      animation: fadeIn 1s ease;
+    }
+
+    h1 {
+      margin-bottom: 15px;
+      font-size: 24px;
+    }
+
+    .music-list {
+      margin: 20px 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .music-list li {
+      background: rgba(255,255,255,0.18);
+      margin: 10px 0;
+      padding: 12px;
+      border-radius: 12px;
+      font-size: 14px;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .music-list li:hover {
+      transform: scale(1.05);
+      background: rgba(255,255,255,0.28);
+    }
+
+    .nav {
+      margin-top: 25px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: #ffd369;
+      font-weight: bold;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <h1>🎧 Musik Favoritku</h1>
+
+    <ul class="music-list">
+      <li>🎶 Indie / Alternative</li>
+      <li>🎵 Pop & Indie Pop</li>
+      <li>🎹 Lo-fi & Chill</li>
+      <li>🎼 Lagu galau & mellow</li>
+      <li>🎤 Lagu santai buat malam</li>
+    </ul>
+
+    <div class="nav">
+      <a href="index.html">⬅ Back</a>
+      <!-- page 3 nanti -->
+      <span style="opacity:0.5;">Next ➜</span>
+    </div>
+  </div>
+</body>
+</html>
