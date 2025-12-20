@@ -33,10 +33,11 @@
       font-size: 24px;
     }
 
+    /* LIST GENRE */
     .music-list {
-      margin: 20px 0;
-      padding: 0;
       list-style: none;
+      padding: 0;
+      margin: 20px 0;
     }
 
     .music-list li {
@@ -45,36 +46,41 @@
       padding: 12px;
       border-radius: 12px;
       font-size: 14px;
-      transition: transform 0.3s ease, background 0.3s ease;
     }
 
-    .music-list li:hover {
-      transform: scale(1.05);
+    /* GENRE YANG BISA DIKLIK */
+    .genre {
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .genre:hover {
       background: rgba(255,255,255,0.28);
     }
 
-    .music-list li a {
-  color: white;
-  text-decoration: none;
-  display: block;
-}
+    /* LIST LAGU */
+    .song-list {
+      list-style: none;
+      padding-left: 15px;
+      margin-top: 8px;
+      display: none;
+    }
 
-.music-list li a:hover {
-  color: #ffd369;
-}
-    /* Hilangkan warna biru & garis bawah link */
-.music-list li a {
-  color: white;
-  text-decoration: none;
-  display: block;
-}
+    .song-list li {
+      background: rgba(255,255,255,0.15);
+      margin: 6px 0;
+      padding: 10px;
+      border-radius: 10px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.2s;
+    }
 
-/* Efek hover biar tetap keren */
-.music-list li a:hover {
-  color: #ffd369;
-}
-
-
+    .song-list li:hover {
+      transform: scale(1.05);
+      background: rgba(255,255,255,0.25);
+    }
 
     .nav {
       margin-top: 25px;
@@ -98,76 +104,55 @@
         transform: translateY(0);
       }
     }
-    /* PAKSA semua link lagu */
-.music-list li a {
-  color: white !important;
-  text-decoration: none !important;
-}
-
-/* Kalau masih bandel */
-.music-list li a:visited,
-.music-list li a:active,
-.music-list li a:hover {
-  color: #ffd369 !important;
-  text-decoration: none !important;
-}
-
   </style>
 </head>
 
 <body>
-  <div class="music-section">
-  <div class="music-title" onclick="toggleMusic()">
-    🎧 Lagu Favorit ▼
-  </div>
+  <div class="card">
+    <h1>🎧 Musik Favoritku</h1>
 
-  <ul id="musicList" class="music-list" style="display:none;">
-    <li onclick="openLink('https://open.spotify.com/track/4cBm8rv2B5BJWU2pDaHVbF?si=76e42d44c9044647')">
-      🎵 Lagu 1
-    </li>
-    <li onclick="openLink('https://open.spotify.com/track/79bWkyd08EFDO0ZZuu7IRT?si=ea37ad8f42774cc1')">
-      🎶 Lagu 2
-    </li>
-    <li onclick="openLink('https://open.spotify.com/track/0UK9lFYKq2xZHOpM2CLE4A?si=3e2a886367d742b6')">
-      🎹 Lagu 3
-    </li>
-  </ul>
-</div>
+    <ul class="music-list">
 
+      <!-- GENRE DENGAN PILIHAN LAGU -->
+      <li class="genre" onclick="toggleGenre('indie')">
+        🎶 Indie / Alternative ▼
+      </li>
+      <ul id="indie" class="song-list">
+        <li onclick="openLink('https://open.spotify.com/track/4cBm8rv2B5BJWU2pDaHVbF')">
+          🎵 Lagu Indie 1
+        </li>
+        <li onclick="openLink('https://open.spotify.com/track/79bWkyd08EFDO0ZZuu7IRT')">
+          🎶 Lagu Indie 2
+        </li>
+      </ul>
 
-      <li>🎶 Indie / Alternative</li>
+      <!-- GENRE BIASA (TETAP ADA) -->
       <li>🎵 Pop & Indie Pop</li>
       <li>🎹 Lo-fi & Chill</li>
       <li>🎼 Lagu galau & mellow</li>
-      <li>
-        <a href="https://open.spotify.com/track/64qfw9JZl3RYCrq4Mn0WvT?si=1a4e5f1a3287429e" target="_blank">
-      🎤 Lagu santai buat malam
-    </a>
-  </li>
-</ul>
-        
-  
+
+      <!-- GENRE DENGAN SATU LAGU -->
+      <li class="genre" onclick="openLink('https://open.spotify.com/track/64qfw9JZl3RYCrq4Mn0WvT')">
+        🎤 Lagu santai buat malam
+      </li>
+
+    </ul>
 
     <div class="nav">
       <a href="index.html">⬅ Back</a>
-      <!-- page 3 nanti -->
       <span style="opacity:0.5;">Next ➜</span>
     </div>
   </div>
-  <script>
-  function openSpotify() {
-    window.open(
-      "https://open.spotify.com/track/64qfw9JZl3RYCrq4Mn0WvT?si=1a4e5f1a3287429e",
-      "_blank"
-    );
-  }
-</script>
 
+  <script>
+    function toggleGenre(id) {
+      const list = document.getElementById(id);
+      list.style.display = list.style.display === "block" ? "none" : "block";
+    }
+
+    function openLink(url) {
+      window.open(url, "_blank");
+    }
+  </script>
 </body>
 </html>
-
-
-
-
-
-
