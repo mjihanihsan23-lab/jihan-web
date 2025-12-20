@@ -116,15 +116,24 @@
 </head>
 
 <body>
-  <div class="card">
-    <h1>🎧 Musik Favoritku</h1>
+  <div class="music-section">
+  <div class="music-title" onclick="toggleMusic()">
+    🎧 Lagu Favorit ▼
+  </div>
 
-    <ul class="music-list">
-      <ul class="music-list">
-  <li onclick="openSpotify()" style="cursor:pointer;">
-    🎧 Lagu Favoritku
-  </li>
-</ul>
+  <ul id="musicList" class="music-list" style="display:none;">
+    <li onclick="openLink('https://open.spotify.com/track/64qfw9JZl3RYCrq4Mn0WvT')">
+      🎵 Lagu 1
+    </li>
+    <li onclick="openLink('https://open.spotify.com')">
+      🎶 Lagu 2
+    </li>
+    <li onclick="openLink('https://open.spotify.com')">
+      🎹 Lagu 3
+    </li>
+  </ul>
+</div>
+
 
       <li>🎶 Indie / Alternative</li>
       <li>🎵 Pop & Indie Pop</li>
@@ -156,6 +165,7 @@
 
 </body>
 </html>
+
 
 
 
